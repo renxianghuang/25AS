@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Level Further Math</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        section {
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        #visitor-count, #last-updated {
+            background-color: #444;
+            padding: 5px 10px;
+            margin: 5px 0;
+            display: inline-block;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>A-Level Further Math</h1>
+        <div class="author"> Hunter</div>
+    </header>
+
+    <!-- Section 1: Further Pure -->
+    <section>
+        <h2>Further Pure</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Topics</th>
+                    <th>Mark Scheme</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Vectors</td>
+                    <td><a href="markscheme/1 Vectors mark scheme.pdf">Mark Scheme</a></td>
+                </tr>
+                <tr>
+                    <td>Proof by Induction</td>
+                    <td><a href="markscheme/2 Proof by induction mark scheme.pdf">Mark Scheme</a></td>
+                </tr>
+                <tr>
+                    <td>Complex Numbers</td>
+                    <td><a href="markscheme/3 Complex number mark scheme.pdf">Mark Scheme</a></td>
+                </tr>
+                <tr>
+                    <td>Roots of Polynomials</td>
+                    <td><a href="markscheme/4 Roots of polynomial mark scheme.pdf">Mark Scheme</a></td>
+                </tr>
+                <tr>
+                    <td>Rational Functions</td>
+                    <td><a href="markscheme/5. Rational function graph mark scheme.pdf">Mark Scheme</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Section 2: Further Statistics -->
+    <section>
+        <h2>Further Statistics</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Topics</th>
+                    <th>Mark Scheme</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Probability Distributions</td>
+                    <td><a href="#">Mark Scheme</a></td>
+                </tr>
+                <tr>
+                    <td>Hypothesis Testing</td>
+                    <td><a href="#">Mark Scheme</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>        
+        <div id="last-updated">Last updated: </div>
+    </footer>
+
+    <script>
+        // Initialize visitor count if not already present
+        if (!localStorage.getItem('visitorCount')) {
+            localStorage.setItem('visitorCount', 0);
+        }
+    
+        // Retrieve the current count, increment it, and store it back
+        let visitorCount = parseInt(localStorage.getItem('visitorCount')) + 1;
+        localStorage.setItem('visitorCount', visitorCount);
+    
+        // Check that the element exists and display visitor count
+        const visitorElement = document.getElementById('visitor-count');
+        if (visitorElement) {
+            visitorElement.innerText = 'Visitor count: ' + visitorCount;
+        } else {
+            console.warn('Visitor count element not found.');
+        }
+    
+        // Display the last updated date
+        const lastUpdated = new Date().toLocaleDateString();
+        const lastUpdatedElement = document.getElementById('last-updated');
+        if (lastUpdatedElement) {
+            lastUpdatedElement.innerText = 'Last updated: ' + lastUpdated;
+        }
+    </script>
+
+</body>
+</html>
